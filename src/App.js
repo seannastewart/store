@@ -1,5 +1,5 @@
 import './App.css';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 import Nav from './componants/Nav'
 import Header from './componants/Header'
@@ -26,13 +26,7 @@ function App() {
   const hide = function () {
     setShowCart(false)
   }
-  const updateCart = function (number) {
-    setCartAmount(number)
-  }
 
-  useEffect(() => {
-    updateCart()
-  }, [])
 
 
 
@@ -47,7 +41,7 @@ function App() {
         {
           showCart
             ?
-            <Cart hideCart={hide} update={updateCart} />
+            <Cart hideCart={hide} />
             : null
         }
         <div className="wrapper">

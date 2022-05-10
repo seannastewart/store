@@ -297,6 +297,11 @@ ul {
   width: 100%;
 }
 
+h3 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
 p {
   font-size: 18px;
   margin: 3%;
@@ -389,11 +394,15 @@ button:hover {
   top: 0;
   right: 0;
   background-color: white;
-  width: 40%;
-  padding: 0 5%;
+  width: 30%;
+  padding-left: 5%;
+  /* min-height: 30%; */
   height: 100%;
   position: fixed;
-
+  box-shadow: 2px 0 10px 0 rgb(0 0 0 / 52%);
+  z-index: 1;
+  border-radius: 20px;
+  overflow-y: scroll;
 }
 
 .cart i {
@@ -413,16 +422,17 @@ button:hover {
   margin-bottom: 5%;
 }
 
+.cart button {
+  width: 50%;
+}
+
 .imageContainer img {
   width: 100px;
 }
 
-.imageContainer {
-  width: 40%
-}
 
 .cartText {
-  width: 60%;
+  width: 70%;
 }
 
 .cartText p {

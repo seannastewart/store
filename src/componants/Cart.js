@@ -22,9 +22,7 @@ function Cart(props) {
         })
     }, [])
 
-    useEffect(() => {
-        props.update(items.length)
-    }, [])
+
 
     const handleRemoveItem = (itemId) => {
         const database = getDatabase(firebase);
@@ -41,6 +39,10 @@ function Cart(props) {
             <ul className="cart">
                 <span onClick={props.hideCart}> <i className="fa-solid fa-circle-xmark"></i></span>
                 <h2>Your Cart</h2>
+                <h3>
+                    {items.length === 0 ? "Your cart is empty"
+                        :
+                        null}</h3>
                 {items.map((item) => {
                     return (
                         <li key={item.name.currentSku.skuId}>
@@ -59,7 +61,9 @@ function Cart(props) {
                         </li>
                     )
                 })}
+                <button>Checkout</button>
             </ul>
+
         </div>
     )
 
