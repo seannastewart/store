@@ -10,7 +10,6 @@ import Footer from './componants/Footer'
 function App() {
 
   const [category, setCategory] = useState('cat150006')
-  const [cartAmount, setCartAmount] = useState(0)
   const [showCart, setShowCart] = useState(false)
 
   const getCategory = function (category) {
@@ -34,7 +33,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <Header unhideCart={show} count={cartAmount} />
+        <Header unhideCart={show} />
       </header>
 
       <main>

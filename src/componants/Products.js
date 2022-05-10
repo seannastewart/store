@@ -22,7 +22,6 @@ function Products(props) {
 
         }).then((res) => {
             setProducts(res.data.products)
-            console.log(res.data.products)
         })
     }, [props.productType])
 
@@ -35,7 +34,7 @@ function Products(props) {
 
 
     return (
-        <div>
+        <div className="products">
             <ul className="items">
                 {
                     products.map(function (product) {

@@ -27,15 +27,13 @@ function Cart(props) {
     const handleRemoveItem = (itemId) => {
         const database = getDatabase(firebase);
         const dbRef = ref(database, `/${itemId}`);
-
-        // using the Firebase method remove(), we remove the node specific to the book ID
         remove(dbRef)
     }
 
 
 
     return (
-        <div>
+        <div className="cartContainer">
             <ul className="cart">
                 <span onClick={props.hideCart}> <i className="fa-solid fa-circle-xmark"></i></span>
                 <h2>Your Cart</h2>

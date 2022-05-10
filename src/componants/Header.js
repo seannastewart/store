@@ -1,7 +1,7 @@
 import headerImg from './assets/6.jpg'
 import { useState, useEffect } from 'react';
 import firebase from '../firebase';
-import { getDatabase, ref, onValue, remove } from 'firebase/database';
+import { getDatabase, ref, onValue } from 'firebase/database';
 
 function Header(props) {
 

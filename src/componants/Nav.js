@@ -2,11 +2,8 @@ import { useState } from 'react';
 
 function Nav(props) {
 
-    // const [selectedCategory, setSelectedCategory] = useState("cat1230034")
-
     const handleCategoryChange = function (event) {
         let categoryNumber = event.target.value
-        // setSelectedCategory(categoryNumber)
         update(categoryNumber)
 
     }
