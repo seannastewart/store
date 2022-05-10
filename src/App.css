@@ -278,6 +278,12 @@ img {
   width: 100%;
 }
 
+ul {
+  list-style: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
 .headerImg img {
   object-fit: cover;
@@ -288,9 +294,6 @@ img {
 .items {
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
   width: 100%;
 }
 
@@ -299,7 +302,7 @@ p {
   margin: 3%;
 }
 
-li {
+.items li {
   width: 25%;
   padding: 0 3% 5% 3%;
   display: flex;
@@ -379,4 +382,66 @@ button:hover {
   box-shadow: 4px 4px #477541;
   ;
   transform: translate(-3px, -3px);
+}
+
+.cart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: white;
+  width: 40%;
+  padding: 0 5%;
+  height: 100%;
+  position: fixed;
+
+}
+
+.cart i {
+  font-size: 16px;
+}
+
+.cart span {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+}
+
+.cart li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5%;
+}
+
+.imageContainer img {
+  width: 100px;
+}
+
+.imageContainer {
+  width: 40%
+}
+
+.cartText {
+  width: 60%;
+}
+
+.cartText p {
+  font-size: 16px;
+}
+
+footer {
+  background-color: #6aad61;
+  color: white;
+  padding: 7px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 16px;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
 }

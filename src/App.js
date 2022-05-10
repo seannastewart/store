@@ -1,13 +1,17 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import Nav from './componants/Nav'
 import Header from './componants/Header'
 import Products from './componants/Products'
+import Cart from './componants/Cart'
+import Footer from './componants/Footer'
 
 function App() {
 
   const [category, setCategory] = useState('cat150006')
+  const [cartAmount, setCartAmount] = useState(0)
+  const [showCart, setShowCart] = useState(false)
 
   const getCategory = function (category) {
     setCategory(category)
@@ -15,20 +19,46 @@ function App() {
   }
 
 
+  const show = function () {
+    setShowCart(true)
+  }
+
+  const hide = function () {
+    setShowCart(false)
+  }
+  const updateCart = function (number) {
+    setCartAmount(number)
+  }
+
+  useEffect(() => {
+    updateCart()
+  }, [])
+
+
+
 
   return (
     <div className="App">
       <header>
-        <Header />
+        <Header unhideCart={show} count={cartAmount} />
       </header>
 
       <main>
+        {
+          showCart
+            ?
+            <Cart hideCart={hide} update={updateCart} />
+            : null
+        }
         <div className="wrapper">
           <Nav updateProducts={getCategory} />
           <Products productType={category} />
-
         </div>
       </main >
+
+      <footer>
+        <Footer />
+      </footer>
     </div >
   );
 }
