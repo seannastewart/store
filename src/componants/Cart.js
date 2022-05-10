@@ -35,7 +35,7 @@ function Cart(props) {
     return (
         <div className="cartContainer">
             <ul className="cart">
-                <span onClick={props.hideCart}> <i className="fa-solid fa-circle-xmark"></i></span>
+                <span onClick={props.hideCart}>x</span>
                 <h2>Your Cart</h2>
                 <h3>
                     {items.length === 0 ? "Your cart is empty"
