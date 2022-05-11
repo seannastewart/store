@@ -1,4 +1,3 @@
-import { useState } from 'react';
 
 function Nav(props) {
 
@@ -26,7 +25,7 @@ function Nav(props) {
                 <label htmlFor="moisturizer">Moisturizers</label>
 
                 <input type="radio" id="cleanser" name="category" value="cat1230033" onClick={handleCategoryChange} />
-                <label htmlFor="cleanser">Cleaners</label>
+                <label htmlFor="cleanser">Cleansers</label>
 
                 <input type="radio" id="treatments" name="category" value="cat1230035" onClick={handleCategoryChange} />
                 <label htmlFor="treatments">Facial Treatments</label>
